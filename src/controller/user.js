@@ -38,3 +38,13 @@ export const givePermission = async (req, res) => {
   }
 };
 
+export const seePermissionListing = async (req, res) => {
+  try {
+    const {_id} = req.userData
+    const result = await filePermissionModel.find({userId: _id})
+    return successHandler(res, 200, allConstants.PERMISSION_LIST_SUCCESS, result);
+  } catch (error) {
+   console.log(error);
+   return errorHandler(res, 404, allConstants.NOT_FOUND_RECORD);
+  };
+};

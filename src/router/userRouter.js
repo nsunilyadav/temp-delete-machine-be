@@ -15,6 +15,10 @@ router.post("/allow-permission", auth.verifyToken, userController.givePermission
 /**
  * 
  */
+router.get('/list-permission-member', auth.verifyToken, userController.seePermissionListing);
+/**
+ * 
+ */
 router.delete('/truncate', auth.verifyToken, userController.userTruncate);
 
 module.exports = router

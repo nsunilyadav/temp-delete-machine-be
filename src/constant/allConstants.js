@@ -21,5 +21,6 @@ module.exports = Object.freeze({
     LOGIN_PASS_DONT_MATCH: 'Password do not match',
     UPLOAD_FILE_RECORD_FOUND: 'File record found.',
     INVALID_TOKEN: 'Invalid token',
+    PERMISSION_LIST_SUCCESS: 'Successfully Permission list record found!',
     RECORD_TRUNCATED: 'Record has been truncated'
 })
