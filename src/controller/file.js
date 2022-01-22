@@ -14,7 +14,7 @@ export const fileListing = async (req, res) => {
     for (const user of allUser) {
         ids.push(user.userId);
     }
-    const fileResult = await fileModel.find({userId: {$in: `${ids}`}});
+    const fileResult = await fileModel.find({userId: {$in: ids}});
         successHandler(res, 200, allConstants.UPLOAD_FILE_RECORD_FOUND, fileResult);
     } catch (error) {
         return errorHandler(res, 500, allConstants.ERR_MSG);
