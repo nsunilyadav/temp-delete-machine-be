@@ -27,7 +27,6 @@ export const fileUpload = async (req, res) => {
         await fileModel.create({name: fileName, userId: req.userData._id});
         successHandler(res, 201, allConstants.FILE_UPLOAD_SUCCESS_MSG)
     } catch (error) {
-        console.log(error);
         return errorHandler(res, 500, allConstants.ERR_MSG);
     };
 };

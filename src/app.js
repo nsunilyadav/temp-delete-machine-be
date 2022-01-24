@@ -14,10 +14,6 @@ import routes from "./router";
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(bodyParser.json());
   app.use(cors());
-  console.log("demo....");
-  app.get("/", (req, res) => {
-    res.send("Hello Demo");
-  });
   app.use("/api", routes);
   const port = process.env.PORT || 8000;
   try {

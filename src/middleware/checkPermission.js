@@ -1,5 +1,5 @@
 import { fileModel, filePermissionModel } from "../models"
-import { successHandler, errorHandler } from "../helper/responseHandler";
+import { errorHandler } from "../helper/responseHandler";
 import { allConstants } from "../constant";
 
 const  canAccessFile = async (req, res, next) =>{
@@ -16,7 +16,6 @@ const  canAccessFile = async (req, res, next) =>{
         }
         return errorHandler(res, 403, allConstants.DONT_ACCESS_FOR_FILE)
     } catch (error) {
-        console.log(error)
         return errorHandler(res, 500, allConstants.ERR_MSG)
     }
 }
